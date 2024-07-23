@@ -2,7 +2,7 @@ resource "aws_instance" "public" {
   ami = "ami-0ff591da048329e00" 
   instance_type = "t2.micro"
   subnet_id = var.public_subnet_id
-  key_name = var.key_name
+  key_name = var.key_name 
 
   user_data = file(install_nginx.sh)
 
@@ -14,7 +14,7 @@ resource "aws_instance" "public" {
 }
 
 resource "aws_security_group" "public_sg" {
-  vpc_id = var.vpc_id
+  vpc_id = aws_vpc.main.id
 
   ingress {
     from_port = 80
