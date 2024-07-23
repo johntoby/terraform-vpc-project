@@ -1,5 +1,5 @@
 resource "aws_instance" "private" {
-  ami = "ami-12345678" # Replace with your desired Ubuntu AMI
+  ami = "ami-0ff591da048329e00" 
   instance_type = "t2.micro"
   subnet_id = var.private_subnet_id
   key_name = var.key_name

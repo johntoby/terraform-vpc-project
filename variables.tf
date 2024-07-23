@@ -1,5 +1,12 @@
 variable "key_name" {
   description = "Key name of the EC2 instance"
+  default = "KCVPC-KEYPAIR"
+}
+
+
+variable "availability_zone" {
+  description = "the avaialbility zone for my subnets"
+  default = "eu-west-1a"
 }
 
 variable "vpc_cidr" {
