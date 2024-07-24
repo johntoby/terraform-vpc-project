@@ -4,7 +4,7 @@ resource "aws_instance" "private" {
   subnet_id = var.private_subnet_id
   key_name = var.key_name
 
-  user_data = file(install_postgresql.sh)
+  user_data = file("${path.module}/install_postgresql.sh")
 
   tags = {
     Name = "Private-Instance"

@@ -1,0 +1,1 @@
+{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"ec2_private","Source":"./ec2_private","Dir":""},{"Key":"ec2_public","Source":"./ec2_public","Dir":""},{"Key":"private_subnet","Source":"./private_subnet","Dir":""},{"Key":"public_subnet","Source":"./public_subnet","Dir":""},{"Key":"vpc","Source":"./vpc","Dir":""}]}
