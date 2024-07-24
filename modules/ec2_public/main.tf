@@ -4,7 +4,7 @@ resource "aws_instance" "public" {
   subnet_id = var.public_subnet_id
   key_name = var.key_name 
 
-  user_data = file(install_nginx.sh)
+  user_data = file("${path.module}/install_nginx.sh")
 
   tags = {
     Name = "Public-Instance"
@@ -48,5 +48,6 @@ resource "aws_security_group" "public_sg" {
     Name = "Public-SG"
   }
 }
+
 
 
