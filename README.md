@@ -22,13 +22,12 @@ Finally,  I included scripts to automatically an nginx web server on the ec2_pub
 ## creating vpc
 The first resource to be created is the vpc. After creating the vpc module, it will be referenced as module "vpc" in my main.tf file as shown in the diagram 
 
-![vpc module code](https://github.com/user-attachments/assets/4f7180b8-6a48-412d-8cbd-783deecc071a)
+![vpc module code](images/vpc-module-code.png)
 
-<br>
+
 
 ![module vpc](https://github.com/user-attachments/assets/8f5eea90-f30e-4a75-b8fe-c75a04013190)
 
-<br>
 
 
 ## deploying the setup 
