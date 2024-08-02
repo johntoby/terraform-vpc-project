@@ -19,7 +19,7 @@ To make my terraform code modular, portable and reusable, I will create 8 module
 
 Finally,  I included scripts to automatically an nginx web server on the ec2_public instance and another script to deploy a postgresql server on the ec2_private instance. All the codes for this project are contained in this repository. 
 
-#creating vpc
+## creating vpc
 The first resource to be created is the vpc. After creating the vpc module, it will be referenced as module "vpc" in my main.tf file as shown in the diagram 
 
 ![vpc module code](https://github.com/user-attachments/assets/4f7180b8-6a48-412d-8cbd-783deecc071a)
