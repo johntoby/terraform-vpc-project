@@ -7,3 +7,4 @@ terraform {
     dynamodb_table = "dynamo-table-kcvpc"
   }
 }
+

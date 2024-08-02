@@ -1,21 +1,20 @@
 output "vpc_id" {
-  value = aws_vpc.main.id
+  value = module.vpc.vpc_id
 }
 
 output "public_subnet_id" {
-  value = aws_subnet.public.id
+  value = module.public_subnet.subnet_id
 }
 
 output "private_subnet_id" {
-  value = aws_subnet.private.id
+  value = module.private_subnet.subnet_id
 }
 
-output "public_instance_id" {
-  value = aws_instance.public.id
+output "webserver_id" {
+  value = module.webserver.instance_id
 }
 
-output "private_instance_id" {
-  value = aws_instance.private.id
+output "dbserver_id" {
+  value = module.dbserver.instance_id
 }
-
 
