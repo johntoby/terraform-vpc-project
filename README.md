@@ -174,5 +174,9 @@ Here are screenshots of the results of the terraform code
 ![2 ec2 instances created and running](https://github.com/user-attachments/assets/44f31c8a-f563-401a-b2f5-4fab6232dbf7)
 
  
+### terraform destroy 
+![terraform destroy](https://github.com/user-attachments/assets/9ad9313c-ea34-425a-855f-97538ad0eb90)
+
+
 
 ### end 
