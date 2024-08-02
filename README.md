@@ -6,7 +6,7 @@ This is a continuation of my earlier project on VPCs which was created using cli
 ## project set up
 I am creating a custom VPC called KCVPC, with 2 subnets - private_subnet & public_subnet. Each subnet will house an Ubuntu Instance named ec2_private & ec2_public. Other parts of the infrastructure to be created include Internet Gateway (IGW), Route tables (public and private), NAT Gateway, Security groups and NACLs. Also, the backend is saved in a remote s3 bucket, and the state is locked in a dynamodb table. All these will be created using Infrastructure as Code tool called terraform.
 
-To make my terraform code modular, portable and reusable, I will create 8 modules which will be referenced in my main.tf file. These module are: 
+To make my terraform code modular, portable and reusable, I will create 8 modules which will be referenced in my main.tf file. These modules are: 
  - vpc
  - subnet
  - webserver
@@ -65,7 +65,7 @@ A nat Gateway will be configured in the public subnet. This will also include cr
 ![module-nat-gateway](https://github.com/user-attachments/assets/d7382a24-d352-43f0-81ed-495b046bafbb)
 
 
-#creating security groups 
+## creating security groups 
 Security groups are the Cloud firewalls that deny or allow traffic to specific ports based on set configurations. Two security groups will be created - privateSG and publicSG for both the private and public subnets. 
 
 
@@ -75,7 +75,7 @@ Security groups are the Cloud firewalls that deny or allow traffic to specific p
 ![public security group](https://github.com/user-attachments/assets/6a4da192-fb6d-442b-82fd-12293e3349a3)
 
 
-## creating network access control lists
+## Creating network access control lists
 Network acls are an additional layer of security over the VPC to further deny or allow traffic. We will be creating nacl for both the public and private subnets 
 
 
@@ -92,7 +92,7 @@ Two instances will be created named webserver and dbserver. The webserver instan
 
 ![webserver](https://github.com/user-attachments/assets/dbc1bb45-c22e-4da5-81c4-716c68e02090)
 
-#creating key pair
+## creating key pair
 An ssh key pair will be created to enable us access the ec2 instances 
 
 ![keypair](https://github.com/user-attachments/assets/68b7f4ea-ace3-467d-8585-82ce005014d6)
