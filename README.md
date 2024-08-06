@@ -4,7 +4,7 @@ A repository to store my terraform files for custom VPC creation.
 This is a continuation of my earlier project on VPCs which was created using clickops. Now, I am automating the entire infrastructure using Terraform.
 
 ## project set up
-I am creating a custom VPC called KCVPC, with 2 subnets - private_subnet & public_subnet. Each subnet will house an Ubuntu Instance named ec2_private & ec2_public. Other parts of the infrastructure to be created include Internet Gateway (IGW), Route tables (public and private), NAT Gateway, Security groups and NACLs. Also, the backend is saved in a remote s3 bucket, and the state is locked in a dynamodb table. All these will be created using Infrastructure as Code tool called terraform.
+I am creating a custom VPC called KCVPC, with 2 subnets - private_subnet & public_subnet. Each subnet will house an Ubuntu Instance named ec2_private & ec2_public. Other parts of the infrastructure to be created include Internet Gateway (IGW), Route tables (public and private), NAT Gateway, Security groups and NACLs. Also, the backend is saved in a remote s3 bucket, and the state is locked in a dynamodb table. All these will be created using Infrastructure as Code tool called Terraform.
 
 To make my terraform code modular, portable and reusable, I will create 8 modules which will be referenced in my main.tf file. These modules are: 
  - vpc
@@ -17,7 +17,12 @@ To make my terraform code modular, portable and reusable, I will create 8 module
  - security_group
  
 
-Finally,  I included scripts to automatically an nginx web server on the ec2_public instance and another script to deploy a postgresql server on the ec2_private instance. All the codes for this project are contained in this repository. 
+Finally,  I included scripts to automatically install an nginx web server on the ec2_public instance and another script to deploy a postgresql server on the ec2_private instance. All the codes for this project are contained in this repository. 
+
+This is the architectural diagram of the design I will be creating: 
+
+![architectural-diagram](https://github.com/user-attachments/assets/9d3531e0-f22d-4481-92ec-c5c245e4f3aa)
+
 
 ## creating vpc
 The first resource to be created is the vpc. After creating the vpc module, it will be referenced as module "vpc" in my main.tf file as shown in the diagram 
