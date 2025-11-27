@@ -1,3 +1,5 @@
+# outputs after terraform apply
+
 output "vpc_id" {
   value = module.vpc.vpc_id
 }
