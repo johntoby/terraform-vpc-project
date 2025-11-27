@@ -7,7 +7,7 @@ terraform {
   }
 }
 
-# Configure the AWS Provider
+# Configure the AWS Provider with a specific profile
 provider "aws" {
   region  = "eu-west-1"
   profile = "jtbaba"
