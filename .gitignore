@@ -1,0 +1,10 @@
+
+# Secrets and local state (never commit)
+*.tfstate
+*.tfstate.*
+.terraform/
+tfplan*
+*.pem
+*-keypair
+*-keypair.pub
+.env
